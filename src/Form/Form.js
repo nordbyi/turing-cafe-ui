@@ -30,7 +30,7 @@ const Form = ({addRes}) => {
     return true
   }
 
-  const clearInputs() => {
+  const clearInputs = () => {
     setName('')
     setDate('')
     setTime('')
@@ -39,11 +39,11 @@ const Form = ({addRes}) => {
 
   return (
     <form onSubmit={event => submitHandler(event)}>
-      <input value={name} placeholder='Name' onChange={event => setName(event.target.value)}></input>
-      <input value={date} placeholder='Date (mm/dd)' onChange={event => setDate(event.target.value)}></input>
-      <input value={time} placeholder='Time' onChange={event => setTime(event.target.value)}></input>
-      <input value={guests} placeholder='Number of Guests' onChange={event => setGuests(event.target.value)}></input>
-      <button>Make a Reservation</button>
+      <input className='name' value={name} placeholder='Name' onChange={event => setName(event.target.value)}></input>
+      <input className='date' value={date} placeholder='Date (mm/dd)' onChange={event => setDate(event.target.value)}></input>
+      <input className='time' value={time} placeholder='Time' onChange={event => setTime(event.target.value)}></input>
+      <input className='guests' value={guests} placeholder='Number of Guests' onChange={event => setGuests(event.target.value)}></input>
+      <button className="submitButton">Make a Reservation</button>
     </form>
   )
 }

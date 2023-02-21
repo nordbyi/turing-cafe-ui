@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../Card/Card";
-import classes from './Reservations.module.css'
+import './Reservations.css'
 
 const Reservations = ({reservs}) => {
   const cards = reservs.map(reserv => {
@@ -8,7 +8,7 @@ const Reservations = ({reservs}) => {
   })
 
   return (
-    <div className={classes.container}>
+    <div className='container'>
       {cards}
     </div>
   )
