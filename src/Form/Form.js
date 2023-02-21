@@ -19,7 +19,6 @@ const Form = ({addRes}) => {
       time,
       number: +guests
     }
-
     // postData(postObj)
     addRes(postObj)
     clearInputs()
@@ -27,7 +26,6 @@ const Form = ({addRes}) => {
 
   const validateForm = () => {
     if(!name || !date || !time || !guests) {
-      // error state change?
       return false
     }
     return true
