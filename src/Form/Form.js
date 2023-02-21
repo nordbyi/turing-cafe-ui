@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import './Form.css'
+import { postData } from "../apiCalls";
 
 const Form = ({addRes}) => {
   const [name, setName] = useState('')
@@ -18,6 +20,7 @@ const Form = ({addRes}) => {
       number: +guests
     }
 
+    // postData(postObj)
     addRes(postObj)
     clearInputs()
   }
@@ -38,7 +41,7 @@ const Form = ({addRes}) => {
   }
 
   return (
-    <form onSubmit={event => submitHandler(event)}>
+    <form className='form' onSubmit={event => submitHandler(event)}>
       <input className='name' value={name} placeholder='Name' onChange={event => setName(event.target.value)}></input>
       <input className='date' value={date} placeholder='Date (mm/dd)' onChange={event => setDate(event.target.value)}></input>
       <input className='time' value={time} placeholder='Time' onChange={event => setTime(event.target.value)}></input>
