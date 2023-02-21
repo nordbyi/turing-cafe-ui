@@ -19,6 +19,7 @@ const Form = ({addRes}) => {
     }
 
     addRes(postObj)
+    clearInputs()
   }
 
   const validateForm = () => {
@@ -27,6 +28,13 @@ const Form = ({addRes}) => {
       return false
     }
     return true
+  }
+
+  const clearInputs() => {
+    setName('')
+    setDate('')
+    setTime('')
+    setGuests('')
   }
 
   return (
