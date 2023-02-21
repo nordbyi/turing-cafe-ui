@@ -1,0 +1,10 @@
+.form {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.submitButton {
+  background-color: teal;
+  color: white;
+}
